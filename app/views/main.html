@@ -1,0 +1,24 @@
+<h1>
+Security Question
+</h1>
+<ng-form name="securityForm" novalidate>
+<div class="alert alert-danger" ng-if="error">
+  <strong>!</strong>Please correct the answer 
+</div>
+<p >{{securityQuestion}}</p>
+
+<div class="row">
+              <div class="col-xs-4 m-t-lg">
+                <input type="text" class="form-control form-control-extended"
+                
+                       ng-model="answer"
+                       ng-change="error=false" 
+                       placeholder="Answer"
+                       required>
+              </div>
+    <div class="button-box">
+      <button id="submitBtn" ng-disabled="!answer || error"  class="btn btn-primary "
+              ng-click="isVerified()">Submit
+      </button>
+    </div>
+</div>
